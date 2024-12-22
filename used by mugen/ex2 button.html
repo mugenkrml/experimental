@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おしゃれなボタン</title>
+  <style>
+    /* ボタン全体のスタイルを設定 */
+    .fancy-button {
+      /* 基本のデザイン */
+      background: linear-gradient(90deg, #ff7eb3, #ff758c); /* グラデーションの背景 */
+      color: white; /* テキストカラー */
+      font-size: 1.2rem; /* 文字サイズ */
+      font-weight: bold; /* 太字 */
+      padding: 10px 20px; /* ボタン内の余白 */
+      border: none; /* 枠線を削除 */
+      border-radius: 50px; /* 角を丸くする */
+      cursor: pointer; /* ポインタカーソルを表示 */
+      transition: all 0.3s ease-in-out; /* アニメーションのスムーズな効果 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ボタンに影をつける */
+    }
+
+    /* ホバー時の効果を設定 */
+    .fancy-button:hover {
+      /* ボタンを明るくする */
+      background: linear-gradient(90deg, #ff758c, #ff7eb3); /* グラデーションを逆に */
+      transform: scale(1.1); /* 少し大きくする */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* 影を強調する */
+    }
+
+    /* クリック時の効果を設定 */
+    .fancy-button:active {
+      transform: scale(0.95); /* ボタンを少し小さくする */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 影を弱くする */
+    }
+  </style>
+</head>
+<body>
+  <!-- ボタンのHTML構造 -->
+  <button class="fancy-button">クリックしてね</button>
+</body>
+</html>

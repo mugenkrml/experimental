@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スタイリッシュなホームページ</title>
+  <style>
+    /* ベーススタイル */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff; /* 爽やかなライトブルー背景 */
+      color: #333;
+    }
+
+    /* ヘッダー全体のスタイル */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #00bcd4, #4caf50); /* 青から緑のグラデーション */
+      padding: 20px 40px;
+      color: white;
+      height: 100px; /* ヘッダーの高さ */
+    }
+
+    /* DUIロゴのスタイル */
+    header .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* web site のスタイル */
+    header .site-name {
+      font-size: 1.2rem;
+      font-weight: normal;
+      margin-left: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* ナビゲーションボタンのスタイル */
+    .nav-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-buttons a {
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* ボタンホバー時のエフェクト */
+    .nav-buttons a:hover {
+      transform: scale(1.1); /* 少し大きくなる */
+      background: rgba(255, 255, 255, 0.2); /* 背景色を少し変更 */
+    }
+
+    /* ボタンに追加する場合のホバー時の色変更 */
+    .nav-buttons a:active {
+      transform: scale(1);
+      background: rgba(255, 255, 255, 0.4); /* クリック時のエフェクト */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダーセクション -->
+  <header>
+    <!-- 左側にDUIとweb site -->
+    <div>
+      <span class="logo">DUI</span>
+      <span class="site-name">web site</span>
+    </div>
+
+    <!-- 右側にナビゲーションボタン -->
+    <div class="nav-buttons">
+      <a href="#">ユーザー検索</a>
+      <a href="#">サーバー検索</a>
+      <a href="#">このサイトについて</a>
+    </div>
+  </header>
+
+</body>
+</html>

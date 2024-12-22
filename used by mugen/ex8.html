@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>このサイトについて</title>
+  <style>
+    /* ベーススタイル */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff; /* 爽やかなライトブルー背景 */
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* ページ全体を覆う */
+    }
+
+    /* ヘッダー全体のスタイル */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #00bcd4, #4caf50); /* 青から緑のグラデーション */
+      padding: 10px 40px;
+      color: white;
+      height: 80px; /* ヘッダーの高さ */
+      position: sticky;
+      top: 0;
+      z-index: 1000; /* スクロール時に上部に固定 */
+    }
+
+    /* DUIロゴのスタイル */
+    header .logo {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* web site のスタイル */
+    header .site-name {
+      font-size: 1.5rem;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+
+    /* ナビゲーションボタンのスタイル */
+    .nav-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-buttons a {
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-buttons a:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* フッター全体のスタイル */
+    footer {
+      background: linear-gradient(90deg, #00bcd4, #4caf50);
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    footer .footer-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    footer .footer-buttons a {
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: transform 0.3s ease-in-out, background 0.3s ease;
+    }
+
+    footer .footer-buttons a:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* メインセクションスタイル */
+    main {
+      padding: 40px;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+
+    .about-section h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #4caf50;
+      text-align: center;
+    }
+
+    .about-section p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .about-section ul {
+      list-style-type: disc;
+      padding-left: 40px;
+    }
+
+    .about-section ul li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダーセクション -->
+  <header>
+    <div>
+      <span class="logo">DUI</span>
+      <span class="site-name">web site</span>
+    </div>
+    <div class="nav-buttons">
+      <a href="ex7.html">ホーム</a>
+      <a href="#">ユーザー検索</a>
+      <a href="#">サーバー検索</a>
+      <a href="#">このサイトについて</a>
+    </div>
+  </header>
+
+  <!-- メインセクション -->
+  <main>
+    <div class="about-section">
+      <h1>このサイトについて</h1>
+      <p>
+        このサイトは、ユーザーが自分の活動を効率的に管理し、他のユーザーと交流するためのプラットフォームを提供します。
+        ディスカッション、検索、学習支援など、多岐にわたる機能を通じて、快適な体験をお届けします。
+      </p>
+      <h2>特徴</h2>
+      <ul>
+        <li>直感的で簡単に操作できるユーザーインターフェース</li>
+        <li>リアルタイムのユーザー検索とサーバー検索機能</li>
+        <li>多機能かつカスタマイズ可能なダッシュボード</li>
+        <li>安全性とプライバシーを重視した設計</li>
+      </ul>
+      <p>
+        今後も機能を拡張し、さらに使いやすいサービスを目指していきます。<br>
+        ご意見やご要望がございましたら、ぜひお聞かせください。
+      </p>
+    </div>
+  </main>
+
+  <!-- フッターセクション -->
+  <footer>
+    <div class="footer-buttons">
+      <a href="#">お問い合わせ</a>
+      <a href="#">利用規約</a>
+      <a href="#">プライバシーポリシー</a>
+    </div>
+  </footer>
+
+</body>
+</html>

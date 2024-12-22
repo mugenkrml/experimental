@@ -65,6 +65,17 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
+    /* 新しく表示されるメッセージのスタイル */
+    .explosion-message {
+      display: none;
+      text-align: center;
+      font-size: 3rem;
+      color: #FF6347; /* 明るいオレンジ色 */
+      margin-top: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
     /* フッターのスタイル */
     footer {
       text-align: center;
@@ -88,7 +99,12 @@
   </header>
 
   <!-- メインボタン -->
-  <button class="fancy-button" onclick="playSound()">クリックしてね</button>
+  <button class="fancy-button" onclick="triggerExplosion()">クリックしてね</button>
+
+  <!-- 新しいメッセージ（爆破メッセージ） -->
+  <div class="explosion-message" id="explosionMessage">
+    職場は爆破されました。
+  </div>
 
   <!-- フッターセクション -->
   <footer>
@@ -103,6 +119,12 @@
       audio.play().catch(function(error) {
         console.error("音声再生エラー:", error);
       });
+    }
+
+    // ボタンクリック時に爆破メッセージを表示し、音を鳴らす関数
+    function triggerExplosion() {
+      playSound(); // 音を鳴らす
+      document.getElementById("explosionMessage").style.display = "block"; // メッセージを表示
     }
   </script>
 </body>

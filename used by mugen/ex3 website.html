@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スタイリッシュなホームページ</title>
+  <style>
+    /* ベーススタイル */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff; /* 爽やかなライトブルー背景 */
+      color: #333;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ヘッダーのスタイル */
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #4CAF50; /* 爽やかな緑 */
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* ボタンのスタイル */
+    .fancy-button {
+      background: linear-gradient(90deg, #00bcd4, #4caf50); /* 青から緑のグラデーション */
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ボタンホバー時のエフェクト */
+    .fancy-button:hover {
+      background: linear-gradient(90deg, #4caf50, #00bcd4); /* ホバー時に色反転 */
+      transform: scale(1.05);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ボタンクリック時のエフェクト */
+    .fancy-button:active {
+      transform: scale(0.95);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* フッターのスタイル */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1rem;
+      color: #777;
+    }
+
+    footer a {
+      color: #4CAF50; /* リンクは緑 */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダーセクション -->
+  <header>
+    <h1>爽やかなホームページ</h1>
+    <p>おしゃれで機能的なデザインをご覧ください。</p>
+  </header>
+
+  <!-- メインボタン -->
+  <button class="fancy-button" onclick="playSound()">クリックしてね</button>
+
+  <!-- フッターセクション -->
+  <footer>
+    <p>&copy; 2024 あなたのウェブサイト | <a href="#">プライバシーポリシー</a></p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // 音を再生する関数
+    function playSound() {
+      const audio = new Audio("https://www.soundjay.com/button/beep-07.wav"); // ポップな音
+      audio.play().catch(function(error) {
+        console.error("音声再生エラー:", error);
+      });
+    }
+  </script>
+</body>
+</html>

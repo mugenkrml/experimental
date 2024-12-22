@@ -3,125 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>スタイリッシュなホームページ</title>
+<title>Discord掲示板 | メインページ</title>
 <style>
 /* ベーススタイル */
 body {
-font-family: 'Arial', sans-serif;
-margin: 0;
-padding: 0;
-background-color: #f0f8ff; /* 爽やかなライトブルー背景 */
-color: #333;
-display: flex;
-flex-direction: column;
-height: 100vh; /* ビューポートの高さを使ってページを展開 */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa; /* 落ち着いたライトグレー */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ヘッダー全体のスタイル */
 header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background: linear-gradient(90deg, #00bcd4, #4caf50); /* 青から緑のグラデーション */
-padding: 10px 40px; /* ヘッダーの高さを薄く設定 */
-color: white;
-height: 80px; /* ヘッダーの高さ */
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #3b5998, #8b9dc3); /* 青から淡い青のグラデーション */
+  padding: 15px 40px;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* DUIロゴのスタイル */
 header .logo {
-font-size: 3rem; /* 少し大きく */
-font-weight: bold;
-letter-spacing: 2px;
-margin-right: 10px; /* 右側の隙間を少し減らす */
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* web site のスタイル */
-header .site-name {
-font-size: 1.5rem; /* 「web site」を「DUI」に近づけるために少し大きく */
-font-weight: normal;
-letter-spacing: 1px;
+header .nav-buttons {
+  display: flex;
+  gap: 20px;
 }
 
-/* ナビゲーションボタンのスタイル */
-.nav-buttons {
-display: flex;
-gap: 20px;
+header .nav-buttons a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.nav-buttons a {
-color: white;
-font-size: 1rem;
-text-decoration: none;
-font-weight: bold;
-padding: 10px 20px;
-border-radius: 30px;
-transition: transform 0.3s ease-in-out;
+header .nav-buttons a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
 }
 
-/* ボタンホバー時のエフェクト */
-.nav-buttons a:hover {
-transform: scale(1.1); /* 少し大きくなる */
-background: rgba(255, 255, 255, 0.2); /* 背景色を少し変更 */
+/* メインコンテンツエリア */
+main {
+  flex-grow: 1;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* ボタンに追加する場合のホバー時の色変更 */
-.nav-buttons a:active {
-transform: scale(1);
-background: rgba(255, 255, 255, 0.4); /* クリック時のエフェクト */
+main h1 {
+  font-size: 3rem;
+  color: #3b5998;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+main .features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+main .feature {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+main .feature:hover {
+  transform: translateY(-10px);
+}
+
+main .feature h3 {
+  color: #3b5998;
+  margin-bottom: 10px;
 }
 
 /* フッター全体のスタイル */
 footer {
-background: linear-gradient(90deg, #00bcd4, #4caf50); /* ヘッダーと同じグラデーション */
-color: white;
-padding: 20px 40px; /* フッターのパディング */
-text-align: center;
-height: 30px; /* ヘッダーの半分の高さ */
-margin-top: auto; /* フッターをページの一番下に配置 */
+  background: linear-gradient(90deg, #3b5998, #8b9dc3);
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
 
-/* フッターボタンのスタイル */
-footer .footer-buttons {
-display: flex;
-justify-content: center;
-gap: 30px; /* ボタン間の間隔 */
-}
-
-footer .footer-buttons a {
-color: white;
-font-size: 1rem;
-text-decoration: none;
-font-weight: bold;
-padding: 8px 15px;
-border-radius: 20px;
-transition: transform 0.3s ease-in-out, background 0.3s ease;
-}
-
-/* フッターボタンホバー時のエフェクト */
-footer .footer-buttons a:hover {
-transform: scale(1.1); /* 少し大きくなる */
-background: rgba(255, 255, 255, 0.2); /* 背景色を少し変更 */
-}
-
-footer .footer-buttons a:active {
-transform: scale(1);
-background: rgba(255, 255, 255, 0.4); /* クリック時のエフェクト */
-}
-
-/* メインコンテンツのスタイル */
-main {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-grow: 1;
-}
-
-main img {
-max-width: 90%; /* 画像が画面に収まるように */
-height: auto;
-border-radius: 10px; /* 角を少し丸める */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 画像に影をつけて立体感を出す */
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 </style>
@@ -130,33 +125,40 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 画像に影をつけて立体感�
 
 <!-- ヘッダーセクション -->
 <header>
-<!-- 左側にDUIとweb site -->
-<div>
-<span class="logo">DUI</span>
-<span class="site-name">web site</span>
-</div>
-
-<!-- 右側にナビゲーションボタン -->
-<div class="nav-buttons">
-<a href="#">ユーザー検索</a>
-<a href="#">サーバー検索</a>
-<a href="#">このサイトについて</a>
-</div>
+  <div class="logo">Discord掲示板</div>
+  <nav class="nav-buttons">
+    <a href="#about">概要</a>
+    <a href="#features">特徴</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
 </header>
 
-<!-- コンテンツセクション（画像の表示）-->
+<!-- メインコンテンツセクション -->
 <main>
-  <img src="https://www.dropbox.com/scl/fi/h6objj6qfsi8wwbshbbzh/B.mugen-image.png?raw=1" alt="画像">
+  <h1>ようこそ、Discord掲示板へ</h1>
+  <p>
+    この掲示板は、あなたと他のユーザーが簡単にコミュニケーションを取り、
+    質問やアイデアを共有するためのプラットフォームです。
+  </p>
+  <div class="features">
+    <div class="feature">
+      <h3>リアルタイムの交流</h3>
+      <p>サーバー内で瞬時にメッセージをやり取りし、議論を深められます。</p>
+    </div>
+    <div class="feature">
+      <h3>カテゴリーごとの整理</h3>
+      <p>トピックごとにスレッドを分類し、必要な情報をすぐに見つけられます。</p>
+    </div>
+    <div class="feature">
+      <h3>モデレーション機能</h3>
+      <p>スパムや不適切なコンテンツを排除するためのツールが充実。</p>
+    </div>
+  </div>
 </main>
 
 <!-- フッターセクション -->
 <footer>
-<!-- フッターボタン -->
-<div class="footer-buttons">
-<a href="#">お問い合わせ</a>
-<a href="#">利用規約</a>
-<a href="#">プライバシーポリシー</a>
-</div>
+  <p>&copy; 2024 Discord掲示板. All Rights Reserved.</p>
 </footer>
 
 </body>

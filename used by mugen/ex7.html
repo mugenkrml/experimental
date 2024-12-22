@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DUI Web Site</title>
+  <style>
+    /* ベーススタイル */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ヘッダー */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #00bcd4, #4caf50);
+      padding: 10px 40px;
+      color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      height: 80px;
+    }
+
+    header .logo {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-right: 10px;
+    }
+
+    header .site-name {
+      font-size: 1.5rem;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-buttons a {
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-buttons a:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* メインコンテンツ */
+    main {
+      margin-top: 100px;
+      padding: 20px 40px;
+      line-height: 1.8;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #00bcd4;
+      margin-bottom: 15px;
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .section p {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    /* フッター */
+    footer {
+      background: linear-gradient(90deg, #00bcd4, #4caf50);
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      height: 60px;
+    }
+
+    .footer-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .footer-buttons a {
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: transform 0.3s ease-in-out, background 0.3s ease;
+    }
+
+    .footer-buttons a:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <div>
+      <span class="logo">DUI</span>
+      <span class="site-name">web site</span>
+    </div>
+    <div class="nav-buttons">
+      <a href="#">ユーザー検索</a>
+      <a href="#">サーバー検索</a>
+      <a href="#">このサイトについて</a>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <div class="section">
+      <h2>サイトの目的</h2>
+      <p>DUI Web Siteは、ユーザーとサーバーを結びつける革新的なプラットフォームです。信頼性の高い情報と直感的なインターフェースで、全てのユーザーが快適に利用できる環境を提供します。</p>
+    </div>
+
+    <div class="section">
+      <h2>特徴</h2>
+      <ul>
+        <li>簡単なユーザー検索</li>
+        <li>直感的なナビゲーション</li>
+        <li>信頼性とセキュリティ</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>画像ギャラリー</h2>
+      <img src="https://via.placeholder.com/800x400" alt="サンプル画像">
+      <p>最新の機能を視覚的に確認できます。</p>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="footer-buttons">
+      <a href="#">お問い合わせ</a>
+      <a href="#">利用規約</a>
+      <a href="#">プライバシーポリシー</a>
+    </div>
+  </footer>
+</body>
+</html>
